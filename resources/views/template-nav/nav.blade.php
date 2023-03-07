@@ -22,7 +22,13 @@
                 <a class="nav-link active" aria-current="page" href="{{Route('home1')}}">Home</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="news/terkini">News</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="{{Route('about_us')}}">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contactus/show">Contact Us</a>
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,6 +69,7 @@
         </nav>
     <br>
     @yield('home')
+    @yield('newsparam')
     @yield('product')
     @yield('product1')
     @yield('product2')

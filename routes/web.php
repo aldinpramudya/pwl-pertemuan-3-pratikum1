@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutusController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
@@ -17,7 +18,7 @@ use App\Http\Controllers\Home1Controller;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/  
 
 Route::get('/', function () {
     return view('welcome');
@@ -44,7 +45,10 @@ Route::prefix('program')->group(function(){
 
 Route::get('/aboutus', [AboutusController::class, 'about'])->name('about_us');
 
-Route::get('/news', [NewsController::class, 'news']);
+Route::get('/news/{id}', [NewsController::class, 'news'])->name('news');
+
+Route::resource('contactus', ContactController::class);
+
 
 
 
